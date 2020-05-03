@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="divice-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <script src="script.js">
+    </script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>CGPA Calculator</h3>
+    <p>Kerala Technological university</p>
+    <hr>
+    <form action="" >
+        <fieldset>
+            <legend>Enter Semester Details :</legend>
+            <table>
+                <tr>
+                    <td><label>Branch</label></td>
+                    <td>
+                        <select id="branch">
+                            <option value="" selected >Select Branch</option>
+                            <option value="0">Computer Science</option>
+                            <option value="1">Civil</option>
+                            <option value="2">Electronics</option>
+                            <option value="3">Mechanical</option>
+                            <option value="4">Electrical</option>
+                            <option value="5">Information Technology</option>
+                        </select>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td><label>Semester</label></td>
+                    <td>
+                        <select id="sem" onchange="sem_change()">
+                            <option value="" selected>Select Semester</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="gra_mech">
+                    <td>
+                        <label>Graphics or Mechanics</label>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="1">Graphics</option>
+                            <option value="1">Mechanics</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button onclick="go()">GO</button>
+            
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>Enter Grade Details</legend>
+            <table>
+                <tr >
+                    <td><label id="subn1" >Subject x</label></td>
+                    <td>
+                        <select id="sub1">
+                            
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">C+</option>
+                            <option value="">C</option>
+                            <option value="">P</option>
+                            <option value="">F</option>
+                            <option value="">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label id="subn2">Subject x</label></td>
+                    <td>
+                        <select id="sub2">
+                            
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">C+</option>
+                            <option value="">C</option>
+                            <option value="">P</option>
+                            <option value="">F</option>
+                            <option value="">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label id="subn3">Subject x</label></td>
+                    <td>
+                        <select id="sub3">
+                            
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">C+</option>
+                            <option value="">C</option>
+                            <option value="">P</option>
+                            <option value="">F</option>
+                            <option value="">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label id="subn4">Subject x</label></td>
+                    <td>
+                        <select id="sub4">
+                            
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">C+</option>
+                            <option value="">C</option>
+                            <option value="">P</option>
+                            <option value="">F</option>
+                            <option value="">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label id="subn6">Subject x</label></td>
+                    <td>
+                        <select id="sub6">
+                            
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">C+</option>
+                            <option value="">C</option>
+                            <option value="">P</option>
+                            <option value="">F</option>
+                            <option value="">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label id="subn7">Subject x</label></td>
+                    <td>
+                        <select id="sub7">
+                            
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">C+</option>
+                            <option value="">C</option>
+                            <option value="">P</option>
+                            <option value="">F</option>
+                            <option value="">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label id="subn8">Subject x</label></td>
+                    <td>
+                        <select id="sub8">
+                            
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">C+</option>
+                            <option value="">C</option>
+                            <option value="">P</option>
+                            <option value="">F</option>
+                            <option value="">FE</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <table><tr>
+                    <th><label>CGPA</label></th>
+                    <th><span id="result">XX</span></th>
+                </tr></table>
+            </legend>
+        </fieldset>
+    </form>
+</body>
+</html>

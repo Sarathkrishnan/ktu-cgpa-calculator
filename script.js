@@ -14,8 +14,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -69,8 +69,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -414,8 +414,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -469,8 +469,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -814,8 +814,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -869,8 +869,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -1214,8 +1214,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -1269,8 +1269,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -1614,8 +1614,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -1669,8 +1669,8 @@ var data = [
 
             },
             sub3 = {
-                crdt: 4,
-                sub_name: "Mechanics",
+                crdt: 0,
+                sub_name: "Mechanics or Graphics",
 
 
             },
@@ -2009,7 +2009,7 @@ subs = ["sub1", "sub2", "sub3", "sub4", "sub5", "sub6", "sub7", "sub8", "sub9"]
 
 function sem_change() {
     var semester = document.getElementById("sem").value;
-    if (semester < 3) {
+    if (semester < 2) {
         document.getElementById("gra_mech").style.display = "block"
     } else {
         document.getElementById("gra_mech").style.display = "none"
@@ -2017,7 +2017,7 @@ function sem_change() {
 }
 
 function go() {
-    console.log
+    
     var semester = document.getElementById("sem").value;
     var branch = document.getElementById("branch").value;
     console.log(semester);
@@ -2043,6 +2043,16 @@ function get_grade() {
     var semester = document.getElementById("sem").value;
     var branch = document.getElementById("branch").value;
     var no_sub = data[branch][semester][0];
+    mech_graphics=document.getElementById("mech_graph").value;
+    if (semester<2){
+        mech_graphics=document.getElementById("mech_graph").value;
+        if(mech_graphics==0){
+            sum_credit=3;
+        }else{
+            sum_credit=4;
+        }
+    }
+
     for (var i = 0; i < no_sub; i++) {
         sub_credit=Number(data[branch][semester][i+1].crdt);
         gp=Number(document.getElementById(subs[i]).value);

@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="divice-width, initial-scale=1.0">
     <title>CGPA Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100&display=swap" rel="stylesheet">
     <script src="script.js">
     </script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3>CGPA Calculator</h3>
+    <div class="header">
+    <h3>SGPA Calculator</h3>
     <p>Kerala Technological university</p>
-    <hr>
+</div>
     <form action="" >
         <fieldset>
             <legend>Enter Semester Details :</legend>
             <table>
                 <tr>
-                    <td><label>Branch</label></td>
+                    <td><label for="branch">Branch</label></td>
                     <td>
                         <select id="branch">
                             <option value="" selected >Select Branch</option>
@@ -32,7 +34,7 @@
                 </tr>
             
                 <tr>
-                    <td><label>Semester</label></td>
+                    <td><label for="sem">Semester</label></td>
                     <td>
                         <select id="sem" onchange="sem_change(); return false;">
                             <option value="" selected>Select Semester</option>
@@ -49,11 +51,11 @@
                 </tr>
                 <tr id="gra_mech">
                     <td>
-                        <label>Graphics or Mechanics</label>
+                        <label for="mech_graph">Graphics or Mechanics</label>
                     </td>
                     <td>
-                        <select>
-                            <option value="1">Graphics</option>
+                        <select id="mech_graph">
+                            <option value="0">Graphics</option>
                             <option value="1">Mechanics</option>
                         </select>
                     </td>
@@ -68,7 +70,7 @@
             <legend>Enter Grade Details</legend>
             <table>
                 <tr id="r1">
-                    <td><label id="subn1" ></label></td>
+                    <td><label for="sub1" id="subn1" ></label></td>
                     <td>
                         <select id="sub1">
                             <option value="" selected>Select grade</option>
@@ -85,7 +87,7 @@
                     </td>
                 </tr>
                 <tr id="r2">
-                    <td><label id="subn2"></label></td>
+                    <td><label for="sub2" id="subn2"></label></td>
                     <td>
                         <select id="sub2">
                             
@@ -103,7 +105,7 @@
                     </td>
                 </tr>
                 <tr id="r3">
-                    <td><label id="subn3"></label></td>
+                    <td><label for="sub3" id="subn3"></label></td>
                     <td>
                         <select id="sub3">
                             
@@ -121,7 +123,7 @@
                     </td>
                 </tr>
                 <tr id="r4">
-                    <td><label id="subn4"></label></td>
+                    <td><label for="sub4" id="subn4"></label></td>
                     <td>
                         <select id="sub4">
                             
@@ -139,7 +141,7 @@
                     </td>
                 </tr>
                 <tr id="r5">
-                    <td><label id="subn5"></label></td>
+                    <td><label for="sub5" id="subn5"></label></td>
                     <td>
                         <select id="sub5">
                             <option value="" selected>Select grade</option>
@@ -156,7 +158,7 @@
                     </td>
                 </tr>
                 <tr id="r6">
-                    <td><label id="subn6"></label></td>
+                    <td><label for="sub6" id="subn6"></label></td>
                     <td>
                         <select id="sub6">
                             
@@ -174,7 +176,7 @@
                     </td>
                 </tr>
                 <tr id="r7">
-                    <td><label id="subn7"></label></td>
+                    <td><label for="sub7" id="subn7"></label></td>
                     <td>
                         <select id="sub7">
                             
@@ -192,7 +194,8 @@
                     </td>
                 </tr>
                 <tr id="r8">
-                    <td><label id="subn8"></label></td>
+                    <td><label for="sub8" id="subn8"></label></td>
+                    
                     <td>
                         <select id="sub8">
                             
@@ -210,7 +213,7 @@
                     </td>
                 </tr>
                 <tr id="r9">
-                    <td><label id="subn9"></label></td>
+                    <td><label for="sub9" id="subn9"></label></td>
                     <td>
                         <select id="sub9">
                             
@@ -239,5 +242,12 @@
             
         </fieldset>
     </form>
+    <div style="height: 60px;">
+        <p>   </p>
+
+    </div>
+    <footer>
+        <div class="footer"><p>sarathkrishnangs@gmail.com</p></div>
+    </footer>
 </body>
 </html>

@@ -34,7 +34,7 @@
                 <tr>
                     <td><label>Semester</label></td>
                     <td>
-                        <select id="sem" onchange="sem_change()">
+                        <select id="sem" onchange="sem_change(); return false;">
                             <option value="" selected>Select Semester</option>
                             <option value="0">1</option>
                             <option value="1">2</option>
@@ -59,7 +59,7 @@
                     </td>
                 </tr>
             </table>
-            <button onclick="go()">GO</button>
+            <button onclick="go(); return false;">GO</button>
             
             
         </fieldset>
@@ -67,141 +67,176 @@
         <fieldset>
             <legend>Enter Grade Details</legend>
             <table>
-                <tr >
-                    <td><label id="subn1" >Subject x</label></td>
+                <tr id="r1">
+                    <td><label id="subn1" ></label></td>
                     <td>
                         <select id="sub1">
-                            
-                            <option value="">O</option>
-                            <option value="">A+</option>
-                            <option value="">A</option>
-                            <option value="">B+</option>
-                            <option value="">B</option>
-                            <option value="">C+</option>
-                            <option value="">C</option>
-                            <option value="">P</option>
-                            <option value="">F</option>
-                            <option value="">FE</option>
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><label id="subn2">Subject x</label></td>
+                <tr id="r2">
+                    <td><label id="subn2"></label></td>
                     <td>
                         <select id="sub2">
                             
-                            <option value="">O</option>
-                            <option value="">A+</option>
-                            <option value="">A</option>
-                            <option value="">B+</option>
-                            <option value="">B</option>
-                            <option value="">C+</option>
-                            <option value="">C</option>
-                            <option value="">P</option>
-                            <option value="">F</option>
-                            <option value="">FE</option>
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><label id="subn3">Subject x</label></td>
+                <tr id="r3">
+                    <td><label id="subn3"></label></td>
                     <td>
                         <select id="sub3">
                             
-                            <option value="">O</option>
-                            <option value="">A+</option>
-                            <option value="">A</option>
-                            <option value="">B+</option>
-                            <option value="">B</option>
-                            <option value="">C+</option>
-                            <option value="">C</option>
-                            <option value="">P</option>
-                            <option value="">F</option>
-                            <option value="">FE</option>
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><label id="subn4">Subject x</label></td>
+                <tr id="r4">
+                    <td><label id="subn4"></label></td>
                     <td>
                         <select id="sub4">
                             
-                            <option value="">O</option>
-                            <option value="">A+</option>
-                            <option value="">A</option>
-                            <option value="">B+</option>
-                            <option value="">B</option>
-                            <option value="">C+</option>
-                            <option value="">C</option>
-                            <option value="">P</option>
-                            <option value="">F</option>
-                            <option value="">FE</option>
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><label id="subn6">Subject x</label></td>
+                <tr id="r5">
+                    <td><label id="subn5"></label></td>
+                    <td>
+                        <select id="sub5">
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="r6">
+                    <td><label id="subn6"></label></td>
                     <td>
                         <select id="sub6">
                             
-                            <option value="">O</option>
-                            <option value="">A+</option>
-                            <option value="">A</option>
-                            <option value="">B+</option>
-                            <option value="">B</option>
-                            <option value="">C+</option>
-                            <option value="">C</option>
-                            <option value="">P</option>
-                            <option value="">F</option>
-                            <option value="">FE</option>
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><label id="subn7">Subject x</label></td>
+                <tr id="r7">
+                    <td><label id="subn7"></label></td>
                     <td>
                         <select id="sub7">
                             
-                            <option value="">O</option>
-                            <option value="">A+</option>
-                            <option value="">A</option>
-                            <option value="">B+</option>
-                            <option value="">B</option>
-                            <option value="">C+</option>
-                            <option value="">C</option>
-                            <option value="">P</option>
-                            <option value="">F</option>
-                            <option value="">FE</option>
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><label id="subn8">Subject x</label></td>
+                <tr id="r8">
+                    <td><label id="subn8"></label></td>
                     <td>
                         <select id="sub8">
                             
-                            <option value="">O</option>
-                            <option value="">A+</option>
-                            <option value="">A</option>
-                            <option value="">B+</option>
-                            <option value="">B</option>
-                            <option value="">C+</option>
-                            <option value="">C</option>
-                            <option value="">P</option>
-                            <option value="">F</option>
-                            <option value="">FE</option>
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="r9">
+                    <td><label id="subn9"></label></td>
+                    <td>
+                        <select id="sub9">
+                            
+                            <option value="" selected>Select grade</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8.5">A</option>
+                            <option value="8">B+</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">P</option>
+                            <option value="0">F</option>
+                            <option value="0">FE</option>
                         </select>
                     </td>
                 </tr>
             </table>
+            <button onclick="get_grade(); return false;">Calculate</button>
         </fieldset>
         <fieldset>
-            <legend>
+            <legend>Result</legend>
                 <table><tr>
                     <th><label>CGPA</label></th>
-                    <th><span id="result">XX</span></th>
+                    <th><span id="result"></span></th>
                 </tr></table>
-            </legend>
+            
         </fieldset>
     </form>
 </body>

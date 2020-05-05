@@ -1,5 +1,5 @@
 #gra_mech {
-    display: none;
+    visibility: hidden;
 }
 
 #r1,
@@ -11,7 +11,7 @@
 #r7,
 #r8,
 #r9 {
-    display: none;
+    visibility: hidden;
 }
 
 body {

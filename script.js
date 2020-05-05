@@ -2010,9 +2010,9 @@ subs = ["sub1", "sub2", "sub3", "sub4", "sub5", "sub6", "sub7", "sub8", "sub9"]
 function sem_change() {
     var semester = document.getElementById("sem").value;
     if (semester < 2) {
-        document.getElementById("gra_mech").style.display = "block"
+        document.getElementById("gra_mech").style.visibility = "visible"
     } else {
-        document.getElementById("gra_mech").style.display = "none"
+        document.getElementById("gra_mech").style.visibility = "hidden";
     }
 }
 
@@ -2025,11 +2025,11 @@ function go() {
     var no_sub = data[branch][semester][0];
     var i = 0;
     for (i = 0; i < 9; i = i + 1) {
-        document.getElementById(r[i]).style.display = "none";
+        document.getElementById(r[i]).style.visibility = "hidden";
 
     }
     for (i = 0; i < no_sub; i = i + 1) {
-        document.getElementById(r[i]).style.display = "block";
+        document.getElementById(r[i]).style.visibility = "visible";
         sname=data[branch][semester][i+1].sub_name;
         document.getElementById(sub[i]).innerHTML = sname;
 

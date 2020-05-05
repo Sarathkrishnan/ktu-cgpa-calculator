@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="divice-width, initial-scale=1.0">
@@ -7,247 +8,259 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100&display=swap" rel="stylesheet">
     <script src="script.js">
     </script>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="header">
-    <h3>SGPA Calculator</h3>
-    <p>Kerala Technological university</p>
-</div>
-    <form action="" >
+        <h3>SGPA Calculator</h3>
+        <p>Kerala Technological university</p>
+    </div>
+
+    <section style="width: 90%; margin: 0 auto; height: 800px; margin-top: 40px;">
+
         <fieldset>
             <legend>Enter Semester Details :</legend>
-            <table>
-                <tr>
-                    <td><label for="branch">Branch</label></td>
-                    <td>
-                        <select id="branch">
-                            <option value="" selected >Select Branch</option>
-                            <option value="0">Computer Science</option>
-                            <option value="1">Civil</option>
-                            <option value="2">Electronics</option>
-                            <option value="3">Mechanical</option>
-                            <option value="4">Electrical</option>
-                            <option value="5">Information Technology</option>
-                        </select>
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td><label for="sem">Semester</label></td>
-                    <td>
-                        <select id="sem" onchange="sem_change(); return false;">
-                            <option value="" selected>Select Semester</option>
-                            <option value="0">1</option>
-                            <option value="1">2</option>
-                            <option value="2">3</option>
-                            <option value="3">4</option>
-                            <option value="4">5</option>
-                            <option value="5">6</option>
-                            <option value="6">7</option>
-                            <option value="7">8</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="gra_mech">
-                    <td>
-                        <label for="mech_graph">Graphics or Mechanics</label>
-                    </td>
-                    <td>
-                        <select id="mech_graph">
-                            <option value="0">Graphics</option>
-                            <option value="1">Mechanics</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
+            <div>
+                <div style="width: 50%; float: left;">
+                </div>
+                <div style="width: 50%; float: left;">
+                </div>
+            </div>
+            <div style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;">
+                    <label for="branch">Branch</label>
+                </div>
+                <div style="width: 50%; float: left;">
+                    <select id="branch">
+                        <option value="" selected>Select Branch</option>
+                        <option value="0">Computer Science</option>
+                        <option value="1">Civil</option>
+                        <option value="2">Electronics</option>
+                        <option value="3">Mechanical</option>
+                        <option value="4">Electrical</option>
+                        <
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sem">Semester</label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sem" onchange="sem_change(); return false;">
+                        <option value="" selected>Select Semester</option>
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
+                        <option value="4">5</option>
+                        <option value="5">6</option>
+                        <option value="6">7</option>
+                        <option value="7">8</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="gra_mech"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="mech_graph">Graphics or Mechanics</label>
+                </div>
+                <div style="width: 50%; float: left;"> <select id="mech_graph">
+                        <option value="0">Graphics</option>
+                        <option value="1">Mechanics</option>
+                    </select>
+                </div>
+            </div>
+
+
+
             <button onclick="go(); return false;">GO</button>
-            
-            
+
+
         </fieldset>
 
         <fieldset>
             <legend>Enter Grade Details</legend>
-            <table>
-                <tr id="r1">
-                    <td><label for="sub1" id="subn1" ></label></td>
-                    <td>
-                        <select id="sub1">
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r2">
-                    <td><label for="sub2" id="subn2"></label></td>
-                    <td>
-                        <select id="sub2">
-                            
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r3">
-                    <td><label for="sub3" id="subn3"></label></td>
-                    <td>
-                        <select id="sub3">
-                            
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r4">
-                    <td><label for="sub4" id="subn4"></label></td>
-                    <td>
-                        <select id="sub4">
-                            
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r5">
-                    <td><label for="sub5" id="subn5"></label></td>
-                    <td>
-                        <select id="sub5">
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r6">
-                    <td><label for="sub6" id="subn6"></label></td>
-                    <td>
-                        <select id="sub6">
-                            
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r7">
-                    <td><label for="sub7" id="subn7"></label></td>
-                    <td>
-                        <select id="sub7">
-                            
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r8">
-                    <td><label for="sub8" id="subn8"></label></td>
-                    
-                    <td>
-                        <select id="sub8">
-                            
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="r9">
-                    <td><label for="sub9" id="subn9"></label></td>
-                    <td>
-                        <select id="sub9">
-                            
-                            <option value="" selected>Select grade</option>
-                            <option value="10">O</option>
-                            <option value="9">A+</option>
-                            <option value="8.5">A</option>
-                            <option value="8">B+</option>
-                            <option value="7">B</option>
-                            <option value="6">C</option>
-                            <option value="5">P</option>
-                            <option value="0">F</option>
-                            <option value="0">FE</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
+            <div id="r1"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub1" id="subn1"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub1">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r2" style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub2" id="subn2"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub2">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r3"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub3" id="subn3"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub3">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r4"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub4" id="subn4"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub4">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r5"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub5" id="subn5"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub5">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r6"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub6" id="subn6"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub6">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r7"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub7" id="subn7"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub7">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r8"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub8" id="subn8"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub8">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+            <div id="r9"  style="margin-bottom:40px;">
+                <div style="width: 50%; float: left;"><label for="sub9" id="subn9"></label>
+                </div>
+                <div style="width: 50%; float: left;"><select id="sub9">
+                        <option value="" selected>Select grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8.5">A</option>
+                        <option value="8">B+</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">P</option>
+                        <option value="0">F</option>
+                        <option value="0">FE</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            
+
             <button onclick="get_grade(); return false;">Calculate</button>
         </fieldset>
         <fieldset>
             <legend>Result</legend>
-                <table><tr>
+            <table>
+                <tr>
                     <th><label>CGPA</label></th>
                     <th><span id="result"></span></th>
-                </tr></table>
-            
-        </fieldset>
-    </form>
-    <div style="height: 60px;">
-        <p>   </p>
+                </tr>
+            </table>
 
-    </div>
+        </fieldset>
+
+    </section>
     <footer>
-        <div class="footer"><p>sarathkrishnangs@gmail.com</p></div>
+        <div class="footer">
+            <p>sarathkrishnangs@gmail.com</p>
+        </div>
     </footer>
 </body>
+
 </html>
